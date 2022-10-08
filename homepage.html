@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <style>
+        li{
+            display: inline-block;
+            padding: 0px 10px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+        a:hover{
+            color: rgb(61, 132, 204);
+        }
+        .b1{
+            border: 1px solid black;
+            height: 275px;
+            width: 22%;
+            float: left;
+            margin: 7% 0% 0% 7%;
+            background-image: url(svg/b1.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .b2{
+            border: 1px solid black;
+            width: 40%;
+            height: 250px; 
+            margin: 18% 0% 0% -6%; 
+            background-image: url(svg/b2.jpg);
+            background-size: 100%;
+            float: left;
+        }
+        .b1:hover{
+            background-size: 150%;
+        }
+        .b2:hover{
+            background-size: 120%;
+        }
+        td{
+            padding: 18px;
+        }
+        table{
+            margin: 20px 0px 0px 0px;
+            color: blue;
+        }
+        input{
+            width: 100%;
+            height: 25px;
+            border-radius: 10px;
+        }
+        textarea{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .float{
+            width: 30%;
+            height: 550px;
+            float: left;
+            border: 1px solid black;
+            margin: 2% 1.33%;
+        } 
+        button:hover{
+            background-color:rgb(61, 132, 204);
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<script>
+    function validateForm(){
+        let x = document.forms["Rform"]["name"].value
+        if (x == ""){
+            alert("Name must be filled out");
+            return false;
+        }
+        let y = document.forms["Rform"]["phonenumber"].value;
+        if(y == ""){
+            alert("phone number must be filled out");
+            return false;
+        }
+        let z = document.forms["Rform"]["arrivaldate"].value;
+        if(z == ""){
+            alert("date must be filled out");
+            return false;
+        }
+}
+</script>
+<body style="background-color: rgba(218, 215, 215, 0.006); margin: 0px 10px;">
+    <div>
+        <div>
+            <center>
+                <ul type="none">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="ourchannels.html">Our Channels</a></li>
+                    <li><a href="contactus.html" >Contact Us</a></li>
+                </ul>
+            </center>
+            <hr>
+        <div>
+            <center>
+            <img class="slide" src="svg/t5.jpg" alt="" srcset="" width="97%" height="400px">
+            <img class="slide" src="svg/t2.jpg" alt="" srcset="" width="97%" height="400px">
+            <img class="slide" src="svg/t3.jpg" alt="" srcset="" width="97%" height="400px">
+            <img class="slide" src="svg/t4.jpg" alt="" srcset="" width="97%" height="400px">
+            <img class="slide" src="svg/t1.jpg" alt="" srcset="" width="97%" height="400px">
+            </center>
+            <button style="float:left; margin: -225px 0px 0px 0px; height: 50px; width:25px; background-color: black; color: white;" class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button style="float: right; margin: -225px 0px 0px 0px; height: 50px; width:25px; background-color: black; color: white;" class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+            <script>
+                var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slide");
+  if (n > x.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  x[slideIndex-1].style.display = "block"; 
+}
+            </script>
+       <!-- </div>
+        <br>
+        </div>
+        <div class="b1"></div>
+        <div class="b2"></div>
+    -->
+    <hr>
+    <div style="width: 68%; float: left;">
+        <h2 align="center">Welcome To Tour And travel</h2><br>
+        <div>
+            <p style="font-size: 20px;"><img style="width: 250px;float: left; padding: 10px; height: 200px;" src="svg/tt1.jpg" alt="" srcset="">Our travel portal software is a well-designed and automated web-based online booking system. It is particularly designed for travel management companies, destination management companies, travel aggregators, B2B B2C travel agencies, tour operators and travel companies. <br><br>
+            Our unique software solution helps business leaders to manage everything impressively and allow complete command across the entire business and process.</p>
+            <br>
+            <p style="font-size: 20px;"><img style="width: 250px;float: left; padding: 10px; height: 200px;" src="svg/tt2.jpg" alt="" srcset="">We provide air ticket booking service for major domestic and international airlines in respect of business or leisure trips through our online B2C Travel Portal.</p>
+        </div>
+    </div>
+        <div style=" width:30%; height: 530px; border: 2px solid blue; margin: 0% 0% 0% 68%; background-image: url(svg/pp.jpg); background-size: 100%; border-radius: 10px; ">
+            <center>
+                <form name="Rform" action="form.php" onsubmit="return validateForm()" method="post" >
+                    <table>
+                        <th colspan="2">Quick Information</th>
+                        <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td><input type="text" name="name" placeholder="enter your name"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td><input type="email" name="email" placeholder="enter your email" id=""></td>
+                            </tr>
+                            <tr>
+                                <td>Phone Number</td>
+                                <td><input type="text" name="phonenumber" placeholder="enter your phone number" id=""></td>
+                            </tr>
+                            <tr>
+                                <td>Arrival Date</td>
+                                <td><input type="date" name="arrivaldate" id=""></td>
+                            </tr>
+                            <tr>
+                                <td>Tour Details</td>
+                                <td><textarea name="tourdetails" placeholder="enter your expectations" id="" cols="30" rows="5"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><button style="background-color: blue; height: 50px; width: 50%; color: white; font-size: 30px; border: 0px; border-radius: 10px;">Send</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </center>
+        </div>
+    </div>
+    <div>
+        <center>
+            <div class="float">
+                <img src="svg/jaipur.jpg" alt="" srcset="" width="100%" height="293px">
+                <h1>Jaipur</h1><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur debitis illum?</p><br><button type="submit">Jaipur</button>
+            </div>
+            <div class="float">
+                <img src="svg/udaipur.jpg" alt="" srcset="" width="100%">
+                <h1>Udaipur</h1><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur debitis illum?</p><br><button type="submit">Udaipur</button>                
+            </div>
+            <div class="float">
+                <img src="svg/kolkata.jpg" alt="" srcset="" width="100%">
+                <h1>Kolkata</h1><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur debitis illum?</p><br><button type="submit">Kolkata</button>
+            </div>
+        </center>
+    </div>
+    <div>
+        <center>
+            <div class="float">
+                <img src="svg/chennai.jpg" alt="" srcset="" width="100%">
+                <h1>Chennai</h1><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur debitis illum?</p><br><button type="submit">Chennai</button>
+            </div>
+            <div class="float">
+                <img src="svg/shimla.jpg" alt="" srcset="" width="100%">
+                <h1>Shimla</h1><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur debitis illum?</p><br><button type="submit">Shimla</button>                
+            </div>
+            <div class="float">
+                <img src="svg/new delhi.jpg" alt="" srcset="" width="100%">
+                <h1>New Delhi</h1><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur debitis illum?</p><br><button type="submit">New Delhi</button>
+            </div>
+        </center>
+    </div>
+    <div>
+        <center>
+            <div class="float">
+                <img src="svg/mumbai.jpg" alt="" srcset="" width="100%">
+                <h1>Mumbai</h1><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur debitis illum?</p><br><button type="submit">Mumbai</button>
+            </div>
+            <div class="float">
+                <img src="svg/goa.jpg" alt="" srcset="" width="100%">
+                <h1>Goa</h1><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur debitis illum?</p><br><button type="submit">Goa</button>                
+            </div>
+            <div class="float">
+                <img src="svg/bengaluru.jpg" alt="" srcset="" width="100%">
+                <h1>Bengaluru</h1><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur debitis illum?</p><br><button type="submit">Bengaluru</button>
+            </div>
+        </center>
+    </div>
+    <div>
+        <center>
+            <button style="width: 200px; height: 50px;"><a style="color: black;" href="nextpage.html">Next page</a></button>
+        </center>
+    </div>
+    <div>
+        <hr>
+        <center>
+            <p>
+               <a href="copyright.html" target="_blank" style="font-size:20px; color:red;">Copyright © 2021 getthetrip1 | Powered by getthetrip1. All rights reserved.</a>
+            </p>
+        </center>
+    </div>
+</body>
+</html>
